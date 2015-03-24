@@ -1,0 +1,17 @@
+﻿Build started 10/16/2014 4:20:50 AM.
+     1>Project "C:\Users\taxidriver\Documents\Visual Studio 2012\Projects\EduardoPointerPower\EduardoPointerPower\EduardoPointerPower.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.0\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /analyze- /errorReport:prompt /clr:nostdlib PointerFunc.cpp
+         PointerFunc.cpp
+     1>PointerFunc.cpp(223): warning C4244: 'initializing' : conversion from 'time_t' to 'int', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\taxidriver\Documents\Visual Studio 2012\Projects\EduardoPointerPower\Debug\EduardoPointerPower.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\taxidriver\Documents\Visual Studio 2012\Projects\EduardoPointerPower\Debug\EduardoPointerPower.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\MenuFunc.obj
+         Debug\PointerFunc.obj
+         Debug\Source.obj
+         "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
+         EduardoPointerPower.vcxproj -> C:\Users\taxidriver\Documents\Visual Studio 2012\Projects\EduardoPointerPower\Debug\EduardoPointerPower.exe
+     1>Done Building Project "C:\Users\taxidriver\Documents\Visual Studio 2012\Projects\EduardoPointerPower\EduardoPointerPower\EduardoPointerPower.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:11.16

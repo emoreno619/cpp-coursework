@@ -1,0 +1,27 @@
+﻿Build started 10/21/2014 1:15:36 PM.
+     1>Project "C:\Users\taxidriver\Desktop\OOPS\COMMENTED AI\TA_AI FINAL2\TA_AI\TA_AI\TA_AI.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.0\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /analyze- /errorReport:prompt /clr:nostdlib AI.cpp MenuFunc.cpp Source.cpp
+         AI.cpp
+     1>AI.cpp(122): warning C4018: '<' : signed/unsigned mismatch
+     1>AI.cpp(134): warning C4018: '<' : signed/unsigned mismatch
+     1>AI.cpp(343): warning C4018: '<' : signed/unsigned mismatch
+     1>AI.cpp(460): warning C4018: '<' : signed/unsigned mismatch
+     1>AI.cpp(632): warning C4018: '<' : signed/unsigned mismatch
+     1>AI.cpp(660): warning C4018: '<' : signed/unsigned mismatch
+     1>AI.cpp(733): warning C4018: '<' : signed/unsigned mismatch
+     1>AI.cpp(788): warning C4018: '<' : signed/unsigned mismatch
+         MenuFunc.cpp
+         Source.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\taxidriver\Desktop\OOPS\COMMENTED AI\TA_AI FINAL2\TA_AI\Debug\TA_AI.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\taxidriver\Desktop\OOPS\COMMENTED AI\TA_AI FINAL2\TA_AI\Debug\TA_AI.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\AI.obj
+         Debug\MenuFunc.obj
+         Debug\Source.obj
+         "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
+         TA_AI.vcxproj -> C:\Users\taxidriver\Desktop\OOPS\COMMENTED AI\TA_AI FINAL2\TA_AI\Debug\TA_AI.exe
+     1>Done Building Project "C:\Users\taxidriver\Desktop\OOPS\COMMENTED AI\TA_AI FINAL2\TA_AI\TA_AI\TA_AI.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:23.42

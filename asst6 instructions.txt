@@ -1,0 +1,211 @@
+Assignment: ISBN Validation.
+
+Option A: 40 points: ISBN-13
+Option B: 50 points: ISNB-10 too.
+
+The first job software must perform is to clean up and verify
+data which is entered in by users.
+
+Average people are less than careful, and often transpose, change, or
+omit numbers.  Software must catch such carelessness immediately and help
+users to be as precise as necessary so they don't end up howling to the
+Moon for their leaders to DO SOMETHING to protect them. 
+
+We program lots of interesting programs, but this kind is really
+important.
+
+We will write a program which inputs a 10-place or
+13-place ISBN number, cleans it up (removes spaces,
+and punctuation,) then strips the last digit (saving it)
+then re-calculates that last (check) digit from the rest
+of the number.  If the result of our calculation matches
+the saved check digit, the function will validate the
+ISBN number, otherwise the function will sound an alarm.
+See the bottom of this file for some sample runs.
+
+NOTE: THE LAST (CHECK) DIGIT of ISBN-10 CAN BE EITHER
+A DIGIT OR AN 'X'.  That requires care on your part.
+Don't toss out a valid 'x' just because it's not a digit.
+
+=========================
+
+Specific directions:
+
+Create a function:
+
+        bool chk_isbn(string)  
+
+which receives a String Object containing user keyboard input.  The string
+SHOULD contain a valid ISBN (International Standard Book Number).
+
+The chk_isbn() function should parse the number, and
+validate the check digit using the data characters,
+removing dashes, spaces, and all non-digits, leaving
+numbers in the first 10 columns.  It should save the
+last digit and remove it from the string, then it should
+re-calculate what that last (check) digit should be and
+compare what it calculates with what it saved.
+
+If they agree, the function should return true, otherwise it should
+return false.
+
+Include a main() function which exercises the chk_isbn()
+function, accepting command-line or interactive input from
+the user.
+
+Your program will be tested against valid ISBNs from the real world,
+and invalid ones.  It should give the proper output in all cases.
+
+Samples of VALID input:
+
+"0-321-40939-6"
+"ISBN 0-321-40939-6"
+"ISBN 0 321 40939 6"
+"0.321.40939.6"
+"0321409396"
+
+To remove junk (non-digits, non-'X') from the string: 
+
+	string.erase(start,length) 
+	
+method to make it easy to "remove" characters from the string which
+don't belong there using something like:
+
+for ( int x = 0 ; x < stringvar.length() ; x++)
+	if (!isdigit(stringvar[x] && toupper(stringvar[x]) != 'X')
+		stringvar.erase(x, 1) ;
+
+General Programming Rule: We ALWAYS ALWAYS ALWAYS have our USERS enter
+their input into CHARACTER STRINGS.  Then, if we are expecting a number
+from them, we can examine and "validate" user input before having our
+program abort because we tried to compute with non-numbers.
+
+Users take a little management, and the programmer who learns this will
+avoid much headache.  Let me expand on that: most people in business
+don't understand their jobs, or where they fit into their organization.
+Because we programmers have better training and education, some of
+us become Systems Analysts, and we inverview, research, and document
+how a business does business before we change anything.  For this,
+we work closely with the Independant CPA/Auditor staff, so the more
+accounting you know, the more effective a Systems Analyst you can be.
+But don't feel superior, a lot of users are so creative, and manage so
+much information, they are surely artists.  Everybody has a contribution
+to make, and if they don't, send them out for more coffee.  And
+invite them to sit with you as you work.  They'll pick it up.
+
+--------------------------------------------
+
+Example: ISBN: 9182736456
+The last column holds the checkdigit: '6'.  We strip it
+off, and keep it.
+
+How to calculate the check digit: multiply each number by
+the number of its column numbering from left to right starting
+with 1, and add the product to a running Sum:
+
+i  digit[i] Sum
+                0
+1   *  9  =  9       
+2   *  1  =  2       
+3   *  8  = 24       
+4   *  2  =  8       
+5   *  7  = 35       
+6   *  3  = 18      
+7   *  6  = 42     
+8   *  4  = 32     
+9   *  5  = 45
+	 i     ______
+    SUM:   215
+
+Now find the Sum mod 11, and that's the check.  If the check is 0-9,
+then it's that digit, if it's 10, it's an 'X'.
+
+215 % 11 == 6, so the checkdigit is 6 
+
+9182736456  GOOD!
+
+
+------------------------------------------------------------------
+
+Extra Credit(60 points instead of 40): on your own,
+research and impliment both ISBN-13 and ISBN-10 logic, and
+write your program so that it can process either ISBN-10
+or ISBN-13 without any special input from the user other
+than the number itself.
+
+
+------------------------------------------------------------------
+
+I wrote mine so it is easy for the user to check my arithmetic.
+
+Never be afraid to let the users see how you get your answers.  If you
+don't, you may face suspicion or resentment.
+
+We should always be earning trust, for the times when the user can't
+understand the math.  You should always tell a user as much as they
+ask for, with nothing held back.  They'll let you know when they've
+had enough.
+
+
+------------------------------------------------------------------
+
+Here Are Some Sample Runs:
+
+
+
+
+=====================================
+Received: 3-13-6139XX50X
+1 * 3  ==   3 
+2 * 1  ==   2 
+3 * 3  ==   9 
+4 * 6  ==  24 
+5 * 1  ==   5 
+6 * 3  ==  18 
+7 * 9  ==  63 
+8 * 5  ==  40 
+9 * 0  ==   0 
+  ____________
+    sum:  164
+sum % 11:  10
+  Check:    X 
+313613950X  GOOD
+
+
+=====================================
+Received: 0321122321
+1 * 0  ==   0 
+2 * 3  ==   6 
+3 * 2  ==   6 
+4 * 1  ==   4 
+5 * 1  ==   5 
+6 * 2  ==  12 
+7 * 2  ==  14 
+8 * 3  ==  24 
+9 * 2  ==  18 
+  ____________
+    sum:   89
+sum % 11:   1
+  Check:    1 
+0321122321  GOOD
+
+
+=====================================
+Received: 1591391849
+1 * 1  ==   1 
+2 * 5  ==  10 
+3 * 9  ==  27 
+4 * 1  ==   4 
+5 * 3  ==  15 
+6 * 9  ==  54 
+7 * 1  ==   7 
+8 * 8  ==  64 
+9 * 4  ==  36 
+  ____________
+    sum:  218
+sum % 11:   9
+  Check:    9 
+1591391849  GOOD
+
+
+
