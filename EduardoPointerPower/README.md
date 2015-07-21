@@ -3,3 +3,7 @@ this program creates a virtual "Galton Board" which simulates a normal distribut
 <img src="https://s3.amazonaws.com/poly-screenshots.angel.co/Project/30/52561/400ac66e3954d5ae6f6ba0824d2bac7f-preview505_jpg.jpg" alt="">
 
 <img src="https://s3.amazonaws.com/poly-screenshots.angel.co/Project/30/52561/6167d4e3aef6151d9aca8f4df9d79f05-preview505_jpg.jpg" alt="">
+
+a galton board
+
+<img src="http://mathworld.wolfram.com/images/eps-gif/GaltonBoard_1000.gif">
