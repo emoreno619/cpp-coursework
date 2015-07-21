@@ -4,7 +4,7 @@ a galton board
 
 <img src="http://mathworld.wolfram.com/images/eps-gif/GaltonBoard_1000.gif">
 
-screen shots of histogram and numerical breakdown
+screen shots of histogram and numerical breakdown of ball paths
 
 <img src="https://s3.amazonaws.com/poly-screenshots.angel.co/Project/30/52561/400ac66e3954d5ae6f6ba0824d2bac7f-preview505_jpg.jpg" alt="">
 
