@@ -1,4 +1,4 @@
-this program creates a virtual "Galton Board" which simulates a normal distribution. a "ball" is dropped at the top of the board, hits a series of pegs and randomly moves left or right upon striking each peg. The ball moves down 10 rows of pegs, and the number of balls for each final position is diplayed, as well as histograms scaled to console window size.
+this program creates a virtual "Galton Board" which simulates a normal distribution. a "ball" is dropped at the top of the board, hits a series of pegs and randomly moves left or right upon striking each peg. The ball moves down 10 rows of pegs, and the number of balls for each final position is displayed, as well as histograms scaled to console window size.
 
 a galton board
 
